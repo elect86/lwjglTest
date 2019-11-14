@@ -5,15 +5,18 @@ plugins {
     id 'java'
     id 'application'
     id 'java-library'
+    id 'idea'
     id "org.jetbrains.kotlin.jvm" version "1.3.50"
     id "com.github.johnrengelman.shadow" version '5.1.0'
 }
+
+idea.module.inheritOutputDirs = true
 
 // jitpack
 group = 'com.github.kotlin_graphics'
 
 application {
-//    mainClassName = "vulkan.basics.TriangleVerboseKt"
+    mainClassName = "main.HelloWorld"
 }
 
 ext {

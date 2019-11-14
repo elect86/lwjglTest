@@ -5,6 +5,7 @@ import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
 import org.lwjgl.system.*;
 
+import java.net.URL;
 import java.nio.*;
 
 import static org.lwjgl.glfw.Callbacks.*;
@@ -20,6 +21,8 @@ public class HelloWorld {
 
     public void run() {
         System.out.println("Hello LWJGL " + Version.getVersion() + "!");
+        System.out.println(getClass().getResource(""));
+        URL url = getClass().getClassLoader().getResource("text.txt");
 
         init();
         loop();
